@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="HelloWorker.Wpf.Views.FolderView.ActAddEditPopUpView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HelloWorker.Wpf.Views.FolderView"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+	<Grid Margin="20" Width="430" Height="200">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="auto" />
+			<ColumnDefinition />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="100" />
+			<RowDefinition Height="35" />
+			<RowDefinition Height="50" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+
+		<TextBlock 
+			HorizontalAlignment="Center"
+			VerticalAlignment="Bottom"
+			Margin="0 0 0 30"
+			FontSize="25"
+			Text="{Binding Title}" 
+			Grid.ColumnSpan="2" />
+
+		<TextBlock 
+			Grid.Row="1" 
+			Grid.Column="0"
+			
+			Text="Название" />
+
+		<TextBox Text="{Binding ActName}" Grid.Row="1" Grid.Column="1" />
+
+		<Button 
+			Grid.Row="2" 
+			Grid.ColumnSpan="2" 
+			HorizontalAlignment="Center"
+			VerticalAlignment="Bottom"
+			Content="Подтвердить"
+			Command="{Binding SubmitCommand}" />
+		
+	</Grid>
+
+	<UserControl.Resources>
+		<Style TargetType="TextBlock">
+			<Setter Property="FontFamily" Value="{StaticResource mainFont}" />
+			<Setter Property="FontSize" Value="{StaticResource fontSize}" />
+			<Setter Property="VerticalAlignment" Value="Center" />
+		</Style>
+		<Style TargetType="TextBox">
+			<Setter Property="FontFamily" Value="{StaticResource mainFont}" />
+			<Setter Property="FontSize" Value="{StaticResource fontSize}" />
+			<Setter Property="Margin" Value="5" />
+			<Setter Property="VerticalContentAlignment" Value="Center" />
+		</Style>
+		<Style TargetType="Button" BasedOn="{StaticResource popUpButton}">
+			<Setter Property="Height" Value="28" />
+			<Setter Property="Width" Value="100" />
+		</Style>
+	</UserControl.Resources>
+</UserControl>

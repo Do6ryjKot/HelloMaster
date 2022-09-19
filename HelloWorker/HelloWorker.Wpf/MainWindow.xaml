@@ -1,0 +1,22 @@
+﻿<Window x:Class="HelloWorker.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:components="clr-namespace:HelloWorker.Wpf.Components"
+        xmlns:local="clr-namespace:HelloWorker.Wpf"
+        mc:Ignorable="d"
+        Title="{StaticResource mainWindowTitle}" 
+		MinHeight="{StaticResource mainWindowMinHeight}" 
+		MinWidth="{StaticResource mainWindowMinWidth}"
+		Height="{StaticResource mainWindowHeight}"
+        Width="{StaticResource mainWindowWidth}"
+		WindowStartupLocation="CenterScreen">
+    <Grid>
+		<components:PopUp DataContext="{Binding PopUpViewModel}" Panel.ZIndex="100" />
+		<ContentControl 
+			Margin="5 10"
+			MaxWidth="{StaticResource contentMaxWidth}" 
+			Content="{Binding CurrentViewModel}" />
+	</Grid>
+</Window>

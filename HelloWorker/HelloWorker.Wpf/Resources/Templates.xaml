@@ -1,0 +1,49 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					
+					xmlns:priceListCalcVm="clr-namespace:HelloWorker.Wpf.ViewModels.PriceListCalculation"
+					xmlns:pricelistCalcPopUp="clr-namespace:HelloWorker.Wpf.ViewModels.PriceListCalculation.PopUp"
+					
+					xmlns:workplacesFolderViewVm="clr-namespace:HelloWorker.Wpf.ViewModels.WorkplacesFolderView"
+					xmlns:actsFolderViewVm="clr-namespace:HelloWorker.Wpf.ViewModels.ActsFolderView"
+					xmlns:actsFolderViewPopUpVm="clr-namespace:HelloWorker.Wpf.ViewModels.ActsFolderView.PopUp"
+					xmlns:actsContentVm="clr-namespace:HelloWorker.Wpf.ViewModels.ActContentView"
+					xmlns:exportPositionsPopUpVm="clr-namespace:HelloWorker.Wpf.ViewModels.ExportPositionsPopUpView"
+					
+					xmlns:view="clr-namespace:HelloWorker.Wpf.Views"
+					xmlns:folderView="clr-namespace:HelloWorker.Wpf.Views.FolderView">
+
+	<!-- Deprecated -->
+	<DataTemplate DataType="{x:Type priceListCalcVm:PriceListCalculationViewModel}">
+		<view:PriceListCalculationView />
+	</DataTemplate>
+	
+	
+	<!-- Окно с объектами -->
+	<DataTemplate DataType="{x:Type workplacesFolderViewVm:WorkplacesFolderViewModel}">
+		<folderView:WorkplacesFolderView />
+	</DataTemplate>	
+	
+	<!-- Окно с актами объектов-->
+	<DataTemplate DataType="{x:Type actsFolderViewVm:ActsFolderViewModel}">
+		<folderView:ActsFolderView />
+	</DataTemplate>
+	
+	<!-- Окно с содержимым объекта -->
+	<DataTemplate DataType="{x:Type actsContentVm:ActContentViewModel}">
+		<view:ActContentView />
+	</DataTemplate>
+
+	<!-- Поп-ап экспорта позиций объекта/акта -->
+	<DataTemplate DataType="{x:Type exportPositionsPopUpVm:ExportWorkplacePositionsPopUpViewModel}">
+		<view:ExportWorkplacePositionsPopUpView />
+	</DataTemplate>
+
+
+	<DataTemplate DataType="{x:Type actsFolderViewPopUpVm:ActAddEditPopUpViewModel}">
+		<folderView:ActAddEditPopUpView />
+	</DataTemplate>
+	<DataTemplate DataType="{x:Type pricelistCalcPopUp:WorkplaceAddEditPopUpViewModel}">
+		<view:WorkplaceAddEditPopUpView />
+	</DataTemplate>
+</ResourceDictionary>

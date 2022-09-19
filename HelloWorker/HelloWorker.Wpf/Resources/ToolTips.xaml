@@ -1,0 +1,22 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+	<!-- Страница работы с объектами -->
+	<sys:String x:Key="addWorkplaceButtonTip">Добавить объект</sys:String>
+	<sys:String x:Key="editWorkplaceButtonTip">Изменить данный объект</sys:String>
+	<sys:String x:Key="removeWorkplaceButtonTip">Удалить данный объект</sys:String>	
+	
+	<!-- Страница работы с актами -->
+	<sys:String x:Key="addActButtonTip">Добавить акт</sys:String>
+	<sys:String x:Key="editActButtonTip">Изменить данный акт</sys:String>
+	<sys:String x:Key="deleteActButtonTip">Удалить данный акт</sys:String>
+	<sys:String x:Key="backToWorkplacesButtonTip">Вернуться к объектам</sys:String>
+	
+	<!-- Страница с содержимым акта -->
+	<sys:String x:Key="backToActsButtonTip">Просмотреть акты</sys:String>
+	<sys:String x:Key="exportButtonTip">Экспорт</sys:String>
+	<sys:String x:Key="refreshWorkplacePositionsButtonTip">Обновить позиции</sys:String>
+	<sys:String x:Key="editWorkplacePositionsButtonTip">Изменить список позиций</sys:String>
+	<sys:String x:Key="stopEditWorkplacePositionsButtonTip">Прекратить изменение списка позиций</sys:String>
+</ResourceDictionary>

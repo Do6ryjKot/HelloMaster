@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloMaster.Domain", "HelloWorker.Domain\HelloMaster.Domain.csproj", "{3F419C43-DE27-440C-BE61-8DA086674380}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloMaster.EntityFramework", "HelloWorker.EntityFramework\HelloMaster.EntityFramework.csproj", "{D5FF1F89-8FDF-4975-A507-2486C1172E6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloMaster.Wpf", "HelloWorker.Wpf\HelloMaster.Wpf.csproj", "{27F42833-20EB-4BF1-A640-E3980697F1A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloMaster.TestConsole", "HelloWorker.TestConsole\HelloMaster.TestConsole.csproj", "{61C14970-E648-4A31-A091-D6B6DBF20F4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloMaster.TelegramApi", "HelloMaster.TelegramApi\HelloMaster.TelegramApi.csproj", "{38E68FC4-5585-4D84-8F2C-CF2933CE780F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F419C43-DE27-440C-BE61-8DA086674380}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F419C43-DE27-440C-BE61-8DA086674380}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F419C43-DE27-440C-BE61-8DA086674380}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F419C43-DE27-440C-BE61-8DA086674380}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5FF1F89-8FDF-4975-A507-2486C1172E6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5FF1F89-8FDF-4975-A507-2486C1172E6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5FF1F89-8FDF-4975-A507-2486C1172E6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5FF1F89-8FDF-4975-A507-2486C1172E6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27F42833-20EB-4BF1-A640-E3980697F1A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27F42833-20EB-4BF1-A640-E3980697F1A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27F42833-20EB-4BF1-A640-E3980697F1A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27F42833-20EB-4BF1-A640-E3980697F1A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61C14970-E648-4A31-A091-D6B6DBF20F4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61C14970-E648-4A31-A091-D6B6DBF20F4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61C14970-E648-4A31-A091-D6B6DBF20F4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61C14970-E648-4A31-A091-D6B6DBF20F4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38E68FC4-5585-4D84-8F2C-CF2933CE780F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38E68FC4-5585-4D84-8F2C-CF2933CE780F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38E68FC4-5585-4D84-8F2C-CF2933CE780F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38E68FC4-5585-4D84-8F2C-CF2933CE780F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A60BF78B-C666-4A96-A9B4-2B508D690347}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,6 @@
+D:\C#\HelloWorker\HelloWorkerProject\HelloWorker\HelloWorker.Domain\bin\Debug\HelloWorker.Domain.dll
+D:\C#\HelloWorker\HelloWorkerProject\HelloWorker\HelloWorker.Domain\bin\Debug\HelloWorker.Domain.pdb
+D:\C#\HelloWorker\HelloWorkerProject\HelloWorker\HelloWorker.Domain\obj\Debug\HelloMaster.Domain.csproj.AssemblyReference.cache
+D:\C#\HelloWorker\HelloWorkerProject\HelloWorker\HelloWorker.Domain\obj\Debug\HelloMaster.Domain.csproj.CoreCompileInputs.cache
+D:\C#\HelloWorker\HelloWorkerProject\HelloWorker\HelloWorker.Domain\obj\Debug\HelloWorker.Domain.dll
+D:\C#\HelloWorker\HelloWorkerProject\HelloWorker\HelloWorker.Domain\obj\Debug\HelloWorker.Domain.pdb

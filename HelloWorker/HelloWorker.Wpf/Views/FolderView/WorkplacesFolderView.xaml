@@ -1,0 +1,112 @@
+﻿<UserControl x:Class="HelloWorker.Wpf.Views.FolderView.WorkplacesFolderView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HelloWorker.Wpf.Views.FolderView"
+             mc:Ignorable="d" 
+             d:DesignHeight="{StaticResource mainWindowMinHeight}" 
+			 d:DesignWidth="{StaticResource mainWindowMinWidth}">
+	
+	<Grid Background="{StaticResource folderViewBackground}">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="45" />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+
+		<!-- Заголовок -->
+		<Border Grid.Row="0" Background="{StaticResource folderViewHeaderBackground}">
+			<Button 
+				Background="{StaticResource folderViewBackground}"
+				Width="30"
+				Height="30"
+				Margin="0 0 5 0"
+				HorizontalAlignment="Right" 
+				VerticalAlignment="Center"
+				ToolTip="{StaticResource addWorkplaceButtonTip}"
+				Command="{Binding AddWorkplaceCommand}">
+				
+				<Image Width="20" Height="20" Source="{StaticResource addBlackImg}"/>
+			</Button>
+		</Border>
+
+		<ListBox 
+			ItemsSource="{Binding Workplaces}"
+			Grid.Row="1"
+			HorizontalContentAlignment="Center"
+			ScrollViewer.HorizontalScrollBarVisibility="Disabled">	
+			
+			<ListBox.ItemsPanel>
+				<ItemsPanelTemplate>
+					<WrapPanel Orientation="Horizontal" />
+				</ItemsPanelTemplate>
+			</ListBox.ItemsPanel>
+
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<Grid>
+						<Grid Panel.ZIndex="5" Margin="5">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition />
+								<ColumnDefinition Width="25" />
+							</Grid.ColumnDefinitions>
+							<StackPanel Grid.Column="1">
+								<Button Command="{Binding OpenEditWorkplacePopUpCommand}">
+									<Image Source="{StaticResource editImg}" ToolTip="{StaticResource editWorkplaceButtonTip}" />
+								</Button>
+								<Button Command="{Binding DeleteWorkplaceCommand}">
+									<Image Source="{StaticResource removeImg}" ToolTip="{StaticResource removeWorkplaceButtonTip}" />
+								</Button>
+								<StackPanel.Resources>
+									<Style TargetType="Button" BasedOn="{StaticResource buttonBase}">
+										<Setter Property="Width" Value="25" />
+										<Setter Property="Height" Value="25" />
+										<Setter Property="Margin" Value="0 0 0 5" />
+										<Setter Property="Background" Value="{StaticResource folderViewDmlButtonsBackground}" />
+									</Style>
+								</StackPanel.Resources>
+							</StackPanel>
+						</Grid>
+						<Grid Width="180">
+							<Grid.RowDefinitions>
+								<RowDefinition Height="150" />
+								<RowDefinition Height="auto" />
+							</Grid.RowDefinitions>
+
+							<Image
+								Width="100"
+								Height="100"
+								Source="{StaticResource folderImg}"
+								Grid.Row="0" />
+
+							<StackPanel Grid.Row="1">
+								<TextBlock Text="{Binding WorkplaceName}" />
+								<TextBlock Margin="0 5 0 0" Text="{Binding WorkplaceAddress}" />
+
+								<StackPanel.Resources>
+									<Style TargetType="TextBlock" BasedOn="{StaticResource folderViewTextBlock}">
+										<Setter Property="HorizontalAlignment" Value="Center" />
+										<Setter Property="MaxHeight" Value="50" />
+										<Setter Property="TextTrimming" Value="WordEllipsis" />
+										<Setter Property="TextWrapping" Value="Wrap" />
+									</Style>
+								</StackPanel.Resources>
+							</StackPanel>
+						</Grid>
+						<Grid.InputBindings>
+							<MouseBinding 
+								MouseAction="LeftDoubleClick"
+								Command="{Binding OpenWorkplaceContentCommand}"
+								CommandParameter="{Binding Workplace}" />
+						</Grid.InputBindings>
+					</Grid>
+				</DataTemplate>
+			</ListBox.ItemTemplate>
+		</ListBox>
+	</Grid>
+
+	<UserControl.Resources>
+		<Style TargetType="Button" BasedOn="{StaticResource buttonBase}" />
+		<Style x:Key="folderViewTextBlock" TargetType="TextBlock" BasedOn="{StaticResource textBlockBase}" />
+	</UserControl.Resources>
+</UserControl>

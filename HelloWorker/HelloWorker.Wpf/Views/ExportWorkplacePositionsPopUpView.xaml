@@ -1,0 +1,99 @@
+﻿<UserControl x:Class="HelloWorker.Wpf.Views.ExportWorkplacePositionsPopUpView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HelloWorker.Wpf.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+	
+	<Grid Margin="20" Width="430" Height="550">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="25" />
+			<RowDefinition />
+			<RowDefinition Height="100" />
+			<RowDefinition Height="75" />
+			<RowDefinition Height="75" />
+			<RowDefinition Height="45" />
+		</Grid.RowDefinitions>
+
+		<TextBlock Grid.Row="0" Text="Выберите поля для экспорта:" />
+
+		<ListView 
+			ItemsSource="{Binding ExportProperties}"
+			Grid.Row="1">
+
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<StackPanel Orientation="Horizontal">
+						<CheckBox IsChecked="{Binding IsUsed}" />
+						<TextBlock Margin="5 0" Text="{Binding ViewName}" />
+					</StackPanel>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+
+		<GroupBox
+			Grid.Row="2"
+			Header="Итого"
+			Margin="0 5 0 2">
+
+			<StackPanel>
+				<RadioButton IsChecked="{Binding ExportNoCost}" Content="Нет" />
+				<RadioButton IsChecked="{Binding ExportCompanyCost}" Content="Итого по ценам предприятия" />
+				<RadioButton IsChecked="{Binding ExportMasterCost}" Content="Итого по ценам мастера"/>
+			</StackPanel>
+		</GroupBox>
+
+		<GroupBox
+			Grid.Row="3"
+			Header="Способ сохранения"
+			Margin="0 2">
+			
+			<StackPanel>				
+				<RadioButton IsChecked="{Binding SaveToDisk}" Content="Сохранить на ПК" />
+				<RadioButton IsChecked="{Binding SendToMessenger}" Content="Отправить в телеграм" />				
+			</StackPanel>
+		</GroupBox>
+		
+		<GroupBox
+			Grid.Row="4"
+			Header="Формат"
+			Margin="0 2">
+			
+			<StackPanel>
+				<RadioButton IsChecked="{Binding UsePdf}" Content="Документ PDF (.pdf)" />
+				<RadioButton IsChecked="{Binding UseXlsx}" Content="Документ Эксель (.xlsx)" />			
+			</StackPanel>
+		</GroupBox>
+
+		<Button Command="{Binding SubmitCommand}" Grid.Row="5" Content="Подтвердить" />
+	</Grid>
+
+	<UserControl.Resources>
+		<Style TargetType="RadioButton">
+			<Setter Property="Margin" Value="0 4" />
+			<Setter Property="FontFamily" Value="{StaticResource mainFont}" />
+			<Setter Property="FontSize" Value="{StaticResource fontSize}" />
+		</Style>
+		<Style TargetType="GroupBox">
+			<Setter Property="FontFamily" Value="{StaticResource mainFont}" />
+			<Setter Property="FontSize" Value="{StaticResource fontSize}" />
+		</Style>
+		<Style TargetType="TextBlock">
+			<Setter Property="FontFamily" Value="{StaticResource mainFont}" />
+			<Setter Property="FontSize" Value="{StaticResource fontSize}" />
+			<Setter Property="VerticalAlignment" Value="Center" />
+		</Style>
+		<Style TargetType="TextBox">
+			<Setter Property="FontFamily" Value="{StaticResource mainFont}" />
+			<Setter Property="FontSize" Value="{StaticResource fontSize}" />
+			<Setter Property="Margin" Value="5" />
+			<Setter Property="VerticalContentAlignment" Value="Center" />
+		</Style>
+		<Style TargetType="Button" BasedOn="{StaticResource popUpButton}">
+			<Setter Property="Height" Value="28" />
+			<Setter Property="Width" Value="100" />
+		</Style>
+	</UserControl.Resources>
+</UserControl>

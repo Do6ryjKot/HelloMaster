@@ -1,0 +1,13 @@
+D:\C#\HelloWorker\HelloWorkerProject\HelloWorker\HelloWorker.TestConsole\bin\Debug\HelloWorker.TestConsole.exe.config
+D:\C#\HelloWorker\HelloWorkerProject\HelloWorker\HelloWorker.TestConsole\bin\Debug\HelloWorker.TestConsole.exe
+D:\C#\HelloWorker\HelloWorkerProject\HelloWorker\HelloWorker.TestConsole\bin\Debug\HelloWorker.TestConsole.pdb
+D:\C#\HelloWorker\HelloWorkerProject\HelloWorker\HelloWorker.TestConsole\bin\Debug\HelloWorker.Domain.dll
+D:\C#\HelloWorker\HelloWorkerProject\HelloWorker\HelloWorker.TestConsole\bin\Debug\HelloWorker.EntityFramework.dll
+D:\C#\HelloWorker\HelloWorkerProject\HelloWorker\HelloWorker.TestConsole\bin\Debug\HelloWorker.Domain.pdb
+D:\C#\HelloWorker\HelloWorkerProject\HelloWorker\HelloWorker.TestConsole\bin\Debug\HelloWorker.EntityFramework.pdb
+D:\C#\HelloWorker\HelloWorkerProject\HelloWorker\HelloWorker.TestConsole\bin\Debug\HelloWorker.EntityFramework.dll.config
+D:\C#\HelloWorker\HelloWorkerProject\HelloWorker\HelloWorker.TestConsole\bin\Debug\EntityFramework.xml
+D:\C#\HelloWorker\HelloWorkerProject\HelloWorker\HelloWorker.TestConsole\obj\Debug\HelloWorker.TestConsole.csproj.AssemblyReference.cache
+D:\C#\HelloWorker\HelloWorkerProject\HelloWorker\HelloWorker.TestConsole\obj\Debug\HelloWorker.TestConsole.csproj.CoreCompileInputs.cache
+D:\C#\HelloWorker\HelloWorkerProject\HelloWorker\HelloWorker.TestConsole\obj\Debug\HelloWorker.TestConsole.exe
+D:\C#\HelloWorker\HelloWorkerProject\HelloWorker\HelloWorker.TestConsole\obj\Debug\HelloWorker.TestConsole.pdb
